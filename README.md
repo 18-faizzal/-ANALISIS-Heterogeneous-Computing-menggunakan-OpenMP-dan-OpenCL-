@@ -1,1 +1,1 @@
-# -ANALISIS-Heterogeneous-Computing-menggunakan-OpenMP-dan-OpenCL-
+ANALISIS Heterogeneous Computing menggunakan OpenMP dan OpenCL 
