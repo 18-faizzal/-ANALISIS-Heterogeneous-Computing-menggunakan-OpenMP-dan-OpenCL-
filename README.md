@@ -17,3 +17,33 @@ Selain membandingkan waktu eksekusi, proyek ini juga melakukan analisis terhadap
 
 Melalui proyek ini diharapkan dapat diperoleh pemahaman yang lebih mendalam mengenai konsep Heterogeneous Computing, perbedaan model paralelisme CPU dan GPU, serta efektivitas masing-masing pendekatan dalam menyelesaikan komputasi numerik berskala besar.
 
+
+# 🏗️ Arsitektur Sistem
+
+## Gambaran Umum
+
+Sistem ini dirancang untuk melakukan analisis kinerja komputasi heterogen pada operasi **General Matrix Multiplication (GEMM)** dengan membandingkan tiga pendekatan komputasi yang berbeda, yaitu **Sequential Computing**, **OpenMP**, dan **OpenCL**. Ketiga metode menerima input matriks yang sama dan menghasilkan output matriks yang identik sehingga perbandingan performa dapat dilakukan secara objektif.
+
+Tujuan utama arsitektur ini adalah mengevaluasi efektivitas paralelisme CPU dan GPU dalam mempercepat proses komputasi matriks berukuran besar melalui pengukuran waktu eksekusi, speedup, dan efisiensi sistem.
+
+### Alur Pemrosesan Sistem
+
+```text
+Input Matrix A & B
+        │
+        ▼
+ Matrix Multiplication
+        │
+ ┌──────┼──────┐
+ │      │      │
+ ▼      ▼      ▼
+Sequential  OpenMP  OpenCL
+ (CPU)      (CPU)   (GPU)
+ │           │       │
+ └──────┬────┴───────┘
+        ▼
+ Performance Analysis
+        │
+        ▼
+ Benchmark Results
+
